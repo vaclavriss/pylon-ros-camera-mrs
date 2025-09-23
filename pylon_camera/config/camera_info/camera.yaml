@@ -1,0 +1,26 @@
+image_width: 800
+image_height: 600
+camera_name: basler_left
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [455.93926578763813, 0.0, 385.8031847802741,
+         0.0, 455.3650515374105, 292.8339550509995,
+         0.0, 0.0, 1.0]
+distortion_model: equidistant
+distortion_coefficients:
+  rows: 1
+  cols: 4
+  data: [-0.043995591685995726, -0.026385108096230243, 0.033784459013084404, -0.01308088754672794]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0,
+         0, 1, 0,
+         0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [455.93926578763813, 0.0, 385.8031847802741, 0.0,
+         0.0, 455.3650515374105, 292.8339550509995, 0.0,
+         0.0, 0.0, 1.0, 0.0]
