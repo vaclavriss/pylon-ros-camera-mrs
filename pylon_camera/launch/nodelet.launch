@@ -15,6 +15,12 @@
 
       <arg name="camera_name" default="basler" />
 
+      <arg name="basler_left_frame" default="$(arg UAV_NAME)/basler_optical" />
+      <arg name="basler_left_slashless" default="basler_optical_$(arg UAV_NAME)" />
+
+      <arg name="fcu_frame" default="$(arg UAV_NAME)/fcu" />
+      <arg name="fcu_frame_slashless" default="fcu_$(arg UAV_NAME)" />
+
       <arg name="config_file" default="$(find pylon_camera)/config/uav.yaml" />
       <arg name="camera_info_url" default="file://$(find pylon_camera)/config/camera_info/camera.yaml" />
 
@@ -38,7 +44,8 @@
         <param name="enable_current_params_publisher" value="$(arg enable_current_params_publisher)"/>
       </node>
       
-    
+    <node pkg="tf2_ros" type="static_transform_publisher" name="$(arg fcu_frame_slashless)_to_$(arg basler_left_slashless)" args=" 0.099 0.0 -0.066 0.5 -0.5 0.5 -0.5 $(arg fcu_frame) $(arg basler_left_frame)" />
+
 </group>
 
 </launch>

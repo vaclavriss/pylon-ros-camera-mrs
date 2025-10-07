@@ -16,7 +16,7 @@
 
 # TODO: When camera is connected, parameter is not loaded...
 # TODO: Understand wierd behavior - When camera is not connected, this parameter is loaded successfully.
-camera_info_url: "/home/mrs/vaclav_ws/src/pylon-ros-camera-mrs/pylon_camera/config/camera_info/camera.yaml" 
+camera_info_url: "/home/mrs/vaclav_ws/src/pylon-ros-camera-mrs/pylon_camera/config/camera_info/ost.yaml" 
 
 #  The encoding of the pixels -- channel meaning, ordering, size
 #  taken from the list of strings in include/sensor_msgs/image_encodings.h
@@ -32,8 +32,8 @@ image_encoding: "rgb8"
 #  (width / binning_x) x (height / binning_y).
 #  The default values binning_x = binning_y = 0 are considered the same
 #  as binning_x = binning_y = 1 (no subsampling).
-binning_x: 2
-binning_y: 2
+binning_x: 4
+binning_y: 4
 
 #  The desired publisher frame rate if listening to the topics.
 #  This parameter can only be set once at startup
